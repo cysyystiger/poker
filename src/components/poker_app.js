@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PokerDecide from './poker_decide';
 const tnts = require('../functions/tnts');
 const ref = require('../functions/ref');
+const ifsame = require('../functions/ifsame');
+const refifsame = require('../functions/refifsame');
 
 export default class PokerApp extends Component {
   constructor(props) {
@@ -124,8 +126,8 @@ export default class PokerApp extends Component {
     }
   }
   dealcard = () => {
-    let a = [0,0,0,0,0,0,0];
     if (!this.state.p1.card) {
+      let a = [0,0,0,0,0];
       let i = 0, r;
       while (i < 5) {
         r = Math.floor(Math.random() * 52 + 1);
@@ -151,11 +153,12 @@ export default class PokerApp extends Component {
       );
     }
     else if (!this.state.b4.card) {
+      let a = [this.state.p1.card, this.state.p2.card, this.state.b1.card, this.state.b2.card, this.state.b3.card, 0];
       let b = 1, r;
       while (b) {
         let c = 0;
+        r = Math.floor(Math.random() * 52 + 1);
         for (let i = 0; i < 5; i++) {
-          r = Math.floor(Math.random() * 52 + 1);
           if (a[i] === r) {
             c++;
           }
@@ -167,11 +170,12 @@ export default class PokerApp extends Component {
       }
       this.setState({ b4: { card: a[5] } });
     } else {
+      let a = [this.state.p1.card, this.state.p2.card, this.state.b1.card, this.state.b2.card, this.state.b3.card, this.state.b4.card, 0];
       let b = 1, r;
       while (b) {
         let c = 0;
+        r = Math.floor(Math.random() * 52 + 1);
         for (let i = 0; i < 6; i++) {
-          r = Math.floor(Math.random() * 52 + 1);
           if (a[i] === r) {
             c++;
           }
@@ -243,6 +247,91 @@ export default class PokerApp extends Component {
       s.splice(4,1); n.splice(4,1); let s5 = s; let n5 = n; s = ts5; n = tn5;
       s.splice(5,1); n.splice(5,1); let s6 = s; let n6 = n; s = ts6; n = tn6;
       console.log(Math.max(ref(s1, n1), ref(s2, n2), ref(s3, n3), ref(s4, n4), ref(s5, n5), ref(s6, n6)));
+      let same = ifsame(
+        { cards: [s1, n1], value: ref(s1, n1) },
+        { cards: [s2, n2], value: ref(s2, n2) },
+        { cards: [s3, n3], value: ref(s3, n3) },
+        { cards: [s4, n4], value: ref(s4, n4) },
+        { cards: [s5, n5], value: ref(s5, n5) },
+        { cards: [s6, n6], value: ref(s6, n6) }
+      );
+      let numarray = refifsame(same);
+      let sum = 0;
+      for (let i = 0;i < 5;i++) {
+        sum = sum + numarray[i];
+      }
+      if (sum === cards.p1.card + cards.p2.card + cards.b1.card + cards.b2.card + cards.b3.card) {
+        this.setState(
+          {
+            p1: { card: cards.p1.card, pick: 1 },
+            p2: { card: cards.p2.card, pick: 1 },
+            b1: { card: cards.b1.card, pick: 1 },
+            b2: { card: cards.b2.card, pick: 1 },
+            b3: { card: cards.b3.card, pick: 1 },
+            b4: { card: cards.b4.card, pick: 0 }
+          }
+        );
+      }
+      else if (sum === cards.p1.card + cards.p2.card + cards.b1.card + cards.b2.card + cards.b4.card) {
+        this.setState(
+          {
+            p1: { card: cards.p1.card, pick: 1 },
+            p2: { card: cards.p2.card, pick: 1 },
+            b1: { card: cards.b1.card, pick: 1 },
+            b2: { card: cards.b2.card, pick: 1 },
+            b3: { card: cards.b3.card, pick: 0 },
+            b4: { card: cards.b4.card, pick: 1 }
+          }
+        );
+      }
+      else if (sum === cards.p1.card + cards.p2.card + cards.b1.card + cards.b3.card + cards.b4.card) {
+        this.setState(
+          {
+            p1: { card: cards.p1.card, pick: 1 },
+            p2: { card: cards.p2.card, pick: 1 },
+            b1: { card: cards.b1.card, pick: 1 },
+            b2: { card: cards.b2.card, pick: 0 },
+            b3: { card: cards.b3.card, pick: 1 },
+            b4: { card: cards.b4.card, pick: 1 }
+          }
+        );
+      }
+      else if (sum === cards.p1.card + cards.p2.card + cards.b2.card + cards.b3.card + cards.b4.card) {
+        this.setState(
+          {
+            p1: { card: cards.p1.card, pick: 1 },
+            p2: { card: cards.p2.card, pick: 1 },
+            b1: { card: cards.b1.card, pick: 0 },
+            b2: { card: cards.b2.card, pick: 1 },
+            b3: { card: cards.b3.card, pick: 1 },
+            b4: { card: cards.b4.card, pick: 1 }
+          }
+        );
+      }
+      else if (sum === cards.p1.card + cards.b1.card + cards.b2.card + cards.b3.card + cards.b4.card) {
+        this.setState(
+          {
+            p1: { card: cards.p1.card, pick: 1 },
+            p2: { card: cards.p2.card, pick: 0 },
+            b1: { card: cards.b1.card, pick: 1 },
+            b2: { card: cards.b2.card, pick: 1 },
+            b3: { card: cards.b3.card, pick: 1 },
+            b4: { card: cards.b4.card, pick: 1 }
+          }
+        );
+      } else {
+        this.setState(
+          {
+            p1: { card: cards.p1.card, pick: 0 },
+            p2: { card: cards.p2.card, pick: 1 },
+            b1: { card: cards.b1.card, pick: 1 },
+            b2: { card: cards.b2.card, pick: 1 },
+            b3: { card: cards.b3.card, pick: 1 },
+            b4: { card: cards.b4.card, pick: 1 }
+          }
+        );
+      }
+
     }
     else if (cards.b4.card !== 0 && cards.b5.card !== 0) {
 
