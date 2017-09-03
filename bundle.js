@@ -19811,15 +19811,15 @@
 	    _this.renderp1 = function (card) {
 	      if (!card.card) {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'f' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'f' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'fb' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'fb' });
 	        }
 	      } else {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'f' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'f' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'fb' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'fb' });
 	        }
 	      }
 	    };
@@ -19827,15 +19827,15 @@
 	    _this.renderp2 = function (card) {
 	      if (!card.card) {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'sb' });
 	        }
 	      } else {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'sb' });
 	        }
 	      }
 	    };
@@ -19843,15 +19843,15 @@
 	    _this.renderb1 = function (card) {
 	      if (!card.card) {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'f' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'f' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'fb' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'fb' });
 	        }
 	      } else {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'f' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'f' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'fb' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'fb' });
 	        }
 	      }
 	    };
@@ -19859,15 +19859,15 @@
 	    _this.renderb2 = function (card) {
 	      if (!card.card) {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'sb' });
 	        }
 	      } else {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'sb' });
 	        }
 	      }
 	    };
@@ -19875,15 +19875,15 @@
 	    _this.renderb3 = function (card) {
 	      if (!card.card) {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'sb' });
 	        }
 	      } else {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'sb' });
 	        }
 	      }
 	    };
@@ -19891,15 +19891,15 @@
 	    _this.renderb4 = function (card) {
 	      if (!card.card) {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'sb' });
 	        }
 	      } else {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'sb' });
 	        }
 	      }
 	    };
@@ -19907,15 +19907,15 @@
 	    _this.renderb5 = function (card) {
 	      if (!card.card) {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/back.jpg', id: 'sb' });
 	        }
 	      } else {
 	        if (!card.pick) {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 's' });
 	        } else {
-	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	          return _react2.default.createElement('img', { src: 'style/front/' + card.card.toString() + '.jpg', id: 'sb' });
 	        }
 	      }
 	    };

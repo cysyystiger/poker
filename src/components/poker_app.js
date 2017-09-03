@@ -24,105 +24,105 @@ export default class PokerApp extends Component {
   renderp1 = (card) => {
     if (!card.card) {
       if (!card.pick) {
-        return <img src="/style/back.jpg" id="f" />;
+        return <img src="style/back.jpg" id="f" />;
       } else {
-        return <img src="/style/back.jpg" id="fb" />;
+        return <img src="style/back.jpg" id="fb" />;
       }
     } else {
       if (!card.pick) {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="f" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="f" />;
       } else {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="fb" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="fb" />;
       }
     }
   }
   renderp2 = (card) => {
     if (!card.card) {
       if (!card.pick) {
-        return <img src="/style/back.jpg" id="s" />;
+        return <img src="style/back.jpg" id="s" />;
       } else {
-        return <img src="/style/back.jpg" id="sb" />;
+        return <img src="style/back.jpg" id="sb" />;
       }
     } else {
       if (!card.pick) {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="s" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="s" />;
       } else {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="sb" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="sb" />;
       }
     }
   }
   renderb1 = (card) => {
     if (!card.card) {
       if (!card.pick) {
-        return <img src="/style/back.jpg" id="f" />;
+        return <img src="style/back.jpg" id="f" />;
       } else {
-        return <img src="/style/back.jpg" id="fb" />;
+        return <img src="style/back.jpg" id="fb" />;
       }
     } else {
       if (!card.pick) {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="f" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="f" />;
       } else {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="fb" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="fb" />;
       }
     }
   }
   renderb2 = (card) => {
     if (!card.card) {
       if (!card.pick) {
-        return <img src="/style/back.jpg" id="s" />;
+        return <img src="style/back.jpg" id="s" />;
       } else {
-        return <img src="/style/back.jpg" id="sb" />;
+        return <img src="style/back.jpg" id="sb" />;
       }
     } else {
       if (!card.pick) {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="s" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="s" />;
       } else {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="sb" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="sb" />;
       }
     }
   }
   renderb3 = (card) => {
     if (!card.card) {
       if (!card.pick) {
-        return <img src="/style/back.jpg" id="s" />;
+        return <img src="style/back.jpg" id="s" />;
       } else {
-        return <img src="/style/back.jpg" id="sb" />;
+        return <img src="style/back.jpg" id="sb" />;
       }
     } else {
       if (!card.pick) {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="s" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="s" />;
       } else {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="sb" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="sb" />;
       }
     }
   }
   renderb4 = (card) => {
     if (!card.card) {
       if (!card.pick) {
-        return <img src="/style/back.jpg" id="s" />;
+        return <img src="style/back.jpg" id="s" />;
       } else {
-        return <img src="/style/back.jpg" id="sb" />;
+        return <img src="style/back.jpg" id="sb" />;
       }
     } else {
       if (!card.pick) {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="s" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="s" />;
       } else {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="sb" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="sb" />;
       }
     }
   }
   renderb5 = (card) => {
     if (!card.card) {
       if (!card.pick) {
-        return <img src="/style/back.jpg" id="s" />;
+        return <img src="style/back.jpg" id="s" />;
       } else {
-        return <img src="/style/back.jpg" id="sb" />;
+        return <img src="style/back.jpg" id="sb" />;
       }
     } else {
       if (!card.pick) {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="s" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="s" />;
       } else {
-        return <img src={`/style/front/${card.card.toString()}.jpg`} id="sb" />;
+        return <img src={`style/front/${card.card.toString()}.jpg`} id="sb" />;
       }
     }
   }
