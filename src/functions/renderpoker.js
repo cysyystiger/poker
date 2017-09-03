@@ -1,5 +1,4 @@
 module.exports = (num) => {
-  const df;
   const a = Math.floor(num / 10000);
   if (a === 9) {
     return 'Straight Flush';
