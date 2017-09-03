@@ -19771,6 +19771,755 @@
 /* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _poker_decide = __webpack_require__(161);
+
+	var _poker_decide2 = _interopRequireDefault(_poker_decide);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var tnts = __webpack_require__(162);
+	var ref = __webpack_require__(163);
+	var maxcards = __webpack_require__(164);
+	var renderpoker = __webpack_require__(165);
+
+	var PokerApp = function (_Component) {
+	  _inherits(PokerApp, _Component);
+
+	  function PokerApp(props) {
+	    _classCallCheck(this, PokerApp);
+
+	    var _this = _possibleConstructorReturn(this, (PokerApp.__proto__ || Object.getPrototypeOf(PokerApp)).call(this, props));
+
+	    _this.renderp1 = function (card) {
+	      if (!card.card) {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'f' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'fb' });
+	        }
+	      } else {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'f' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'fb' });
+	        }
+	      }
+	    };
+
+	    _this.renderp2 = function (card) {
+	      if (!card.card) {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	        }
+	      } else {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	        }
+	      }
+	    };
+
+	    _this.renderb1 = function (card) {
+	      if (!card.card) {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'f' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'fb' });
+	        }
+	      } else {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'f' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'fb' });
+	        }
+	      }
+	    };
+
+	    _this.renderb2 = function (card) {
+	      if (!card.card) {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	        }
+	      } else {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	        }
+	      }
+	    };
+
+	    _this.renderb3 = function (card) {
+	      if (!card.card) {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	        }
+	      } else {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	        }
+	      }
+	    };
+
+	    _this.renderb4 = function (card) {
+	      if (!card.card) {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	        }
+	      } else {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	        }
+	      }
+	    };
+
+	    _this.renderb5 = function (card) {
+	      if (!card.card) {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/back.jpg', id: 'sb' });
+	        }
+	      } else {
+	        if (!card.pick) {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 's' });
+	        } else {
+	          return _react2.default.createElement('img', { src: '/style/front/' + card.card.toString() + '.jpg', id: 'sb' });
+	        }
+	      }
+	    };
+
+	    _this.dealcard = function () {
+	      if (!_this.state.p1.card) {
+	        var a = [0, 0, 0, 0, 0];
+	        var i = 0,
+	            r = void 0;
+	        while (i < 5) {
+	          r = Math.floor(Math.random() * 52 + 1);
+	          var c = 0;
+	          for (var j = 0; j < i; j++) {
+	            if (a[j] === r) {
+	              c++;
+	            }
+	          }
+	          if (!c) {
+	            a[i] = r;
+	            i++;
+	          }
+	        };
+	        _this.setState({
+	          p1: { card: a[0] },
+	          p2: { card: a[1] },
+	          b1: { card: a[2] },
+	          b2: { card: a[3] },
+	          b3: { card: a[4] }
+	        });
+	      } else if (!_this.state.b4.card) {
+	        var _a = [_this.state.p1.card, _this.state.p2.card, _this.state.b1.card, _this.state.b2.card, _this.state.b3.card, 0];
+	        var b = 1,
+	            _r = void 0;
+	        while (b) {
+	          var _c = 0;
+	          _r = Math.floor(Math.random() * 52 + 1);
+	          for (var _i = 0; _i < 5; _i++) {
+	            if (_a[_i] === _r) {
+	              _c++;
+	            }
+	          }
+	          if (!_c) {
+	            _a[5] = _r;
+	            b = 0;
+	          }
+	        }
+	        _this.setState({ b4: { card: _a[5] } });
+	      } else {
+	        var _a2 = [_this.state.p1.card, _this.state.p2.card, _this.state.b1.card, _this.state.b2.card, _this.state.b3.card, _this.state.b4.card, 0];
+	        var _b = 1,
+	            _r2 = void 0;
+	        while (_b) {
+	          var _c2 = 0;
+	          _r2 = Math.floor(Math.random() * 52 + 1);
+	          for (var _i2 = 0; _i2 < 6; _i2++) {
+	            if (_a2[_i2] === _r2) {
+	              _c2++;
+	            }
+	          }
+	          if (!_c2) {
+	            _a2[6] = _r2;
+	            _b = 0;
+	          }
+	        }
+	        _this.setState({ b5: { card: _a2[6] } });
+	      }
+	    };
+
+	    _this.decide = function (cards) {
+	      if (cards.p1.card !== 0 && cards.b4.card === 0) {
+	        var s = ['', '', '', '', ''];
+	        var n = [0, 0, 0, 0, 0];
+	        var j = 0;
+	        for (var i = 52; i > 0; i--) {
+	          if (i === cards.p1.card || i === cards.p2.card || i === cards.b1.card || i === cards.b2.card || i === cards.b3.card) {
+	            s[j] = tnts(i);
+	            n[j] = i;
+	            j++;
+	          }
+	        }
+	        console.log(ref(s, n));
+	        _this.setState({
+	          p1: { card: cards.p1.card, pick: 1 },
+	          p2: { card: cards.p2.card, pick: 1 },
+	          b1: { card: cards.b1.card, pick: 1 },
+	          b2: { card: cards.b2.card, pick: 1 },
+	          b3: { card: cards.b3.card, pick: 1 },
+	          poker: renderpoker(ref(s, n))
+	        });
+	      } else if (cards.b4.card !== 0 && cards.b5.card === 0) {
+	        var _s = ['', '', '', '', '', ''];var _n = [0, 0, 0, 0, 0, 0];
+	        var ts1 = ['', '', '', '', '', ''];var tn1 = [0, 0, 0, 0, 0, 0];
+	        var ts2 = ['', '', '', '', '', ''];var tn2 = [0, 0, 0, 0, 0, 0];
+	        var ts3 = ['', '', '', '', '', ''];var tn3 = [0, 0, 0, 0, 0, 0];
+	        var ts4 = ['', '', '', '', '', ''];var tn4 = [0, 0, 0, 0, 0, 0];
+	        var ts5 = ['', '', '', '', '', ''];var tn5 = [0, 0, 0, 0, 0, 0];
+	        var ts6 = ['', '', '', '', '', ''];var tn6 = [0, 0, 0, 0, 0, 0];
+	        var _j = 0;
+	        for (var _i3 = 52; _i3 > 0; _i3--) {
+	          if (_i3 === cards.p1.card || _i3 === cards.p2.card || _i3 === cards.b1.card || _i3 === cards.b2.card || _i3 === cards.b3.card || _i3 === cards.b4.card) {
+	            _s[_j] = tnts(_i3);_n[_j] = _i3;
+	            ts1[_j] = tnts(_i3);tn1[_j] = _i3;ts2[_j] = tnts(_i3);tn2[_j] = _i3;
+	            ts3[_j] = tnts(_i3);tn3[_j] = _i3;ts4[_j] = tnts(_i3);tn4[_j] = _i3;
+	            ts5[_j] = tnts(_i3);tn5[_j] = _i3;ts6[_j] = tnts(_i3);tn6[_j] = _i3;
+	            _j++;
+	          }
+	        }
+	        _s.splice(0, 1);_n.splice(0, 1);var s1 = _s;var n1 = _n;_s = ts1;_n = tn1;
+	        _s.splice(1, 1);_n.splice(1, 1);var s2 = _s;var n2 = _n;_s = ts2;_n = tn2;
+	        _s.splice(2, 1);_n.splice(2, 1);var s3 = _s;var n3 = _n;_s = ts3;_n = tn3;
+	        _s.splice(3, 1);_n.splice(3, 1);var s4 = _s;var n4 = _n;_s = ts4;_n = tn4;
+	        _s.splice(4, 1);_n.splice(4, 1);var s5 = _s;var n5 = _n;_s = ts5;_n = tn5;
+	        _s.splice(5, 1);_n.splice(5, 1);var s6 = _s;var n6 = _n;_s = ts6;_n = tn6;
+	        console.log(Math.max(ref(s1, n1), ref(s2, n2), ref(s3, n3), ref(s4, n4), ref(s5, n5), ref(s6, n6)));
+	        var maxpoker = Math.max(ref(s1, n1), ref(s2, n2), ref(s3, n3), ref(s4, n4), ref(s5, n5), ref(s6, n6));
+	        _this.setState({
+	          poker: renderpoker(maxpoker)
+	        });
+	        var result = maxcards([{ value: ref(s1, n1), cards: n1 }, { value: ref(s2, n2), cards: n2 }, { value: ref(s3, n3), cards: n3 }, { value: ref(s4, n4), cards: n4 }, { value: ref(s5, n5), cards: n5 }, { value: ref(s6, n6), cards: n6 }]);
+	        var sum = 0;
+	        for (var _i4 = 0; _i4 < 5; _i4++) {
+	          sum = sum + result[_i4];
+	        }
+	        if (sum === cards.p1.card + cards.p2.card + cards.b1.card + cards.b2.card + cards.b3.card) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 0 }
+	          });
+	        } else if (sum === cards.p1.card + cards.p2.card + cards.b1.card + cards.b2.card + cards.b4.card) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 0 },
+	            b4: { card: cards.b4.card, pick: 1 }
+	          });
+	        } else if (sum === cards.p1.card + cards.p2.card + cards.b1.card + cards.b3.card + cards.b4.card) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 0 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 }
+	          });
+	        } else if (sum === cards.p1.card + cards.p2.card + cards.b2.card + cards.b3.card + cards.b4.card) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 0 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 }
+	          });
+	        } else if (sum === cards.p1.card + cards.b1.card + cards.b2.card + cards.b3.card + cards.b4.card) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 0 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 }
+	          });
+	        } else {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 0 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 }
+	          });
+	        }
+	      } else if (cards.b4.card !== 0 && cards.b5.card !== 0) {
+	        var _s2 = ['', '', '', '', '', '', ''];var _n2 = [0, 0, 0, 0, 0, 0];
+	        var _ts = ['', '', '', '', '', '', ''];var _tn = [0, 0, 0, 0, 0, 0, 0];
+	        var _ts2 = ['', '', '', '', '', '', ''];var _tn2 = [0, 0, 0, 0, 0, 0, 0];
+	        var _ts3 = ['', '', '', '', '', '', ''];var _tn3 = [0, 0, 0, 0, 0, 0, 0];
+	        var _ts4 = ['', '', '', '', '', '', ''];var _tn4 = [0, 0, 0, 0, 0, 0, 0];
+	        var _ts5 = ['', '', '', '', '', '', ''];var _tn5 = [0, 0, 0, 0, 0, 0, 0];
+	        var _ts6 = ['', '', '', '', '', '', ''];var _tn6 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts7 = ['', '', '', '', '', '', ''];var tn7 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts8 = ['', '', '', '', '', '', ''];var tn8 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts9 = ['', '', '', '', '', '', ''];var tn9 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts10 = ['', '', '', '', '', '', ''];var tn10 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts11 = ['', '', '', '', '', '', ''];var tn11 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts12 = ['', '', '', '', '', '', ''];var tn12 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts13 = ['', '', '', '', '', '', ''];var tn13 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts14 = ['', '', '', '', '', '', ''];var tn14 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts15 = ['', '', '', '', '', '', ''];var tn15 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts16 = ['', '', '', '', '', '', ''];var tn16 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts17 = ['', '', '', '', '', '', ''];var tn17 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts18 = ['', '', '', '', '', '', ''];var tn18 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts19 = ['', '', '', '', '', '', ''];var tn19 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts20 = ['', '', '', '', '', '', ''];var tn20 = [0, 0, 0, 0, 0, 0, 0];
+	        var ts21 = ['', '', '', '', '', '', ''];var tn21 = [0, 0, 0, 0, 0, 0, 0];
+	        var _j2 = 0;
+	        for (var _i6 = 52; _i6 > 0; _i6--) {
+	          if (_i6 === cards.p1.card || _i6 === cards.p2.card || _i6 === cards.b1.card || _i6 === cards.b2.card || _i6 === cards.b3.card || _i6 === cards.b4.card || _i6 === cards.b5.card) {
+	            _s2[_j2] = tnts(_i6);_n2[_j2] = _i6;
+	            _ts[_j2] = tnts(_i6);_tn[_j2] = _i6;_ts2[_j2] = tnts(_i6);_tn2[_j2] = _i6;
+	            _ts3[_j2] = tnts(_i6);_tn3[_j2] = _i6;_ts4[_j2] = tnts(_i6);_tn4[_j2] = _i6;
+	            _ts5[_j2] = tnts(_i6);_tn5[_j2] = _i6;_ts6[_j2] = tnts(_i6);_tn6[_j2] = _i6;
+	            ts7[_j2] = tnts(_i6);tn7[_j2] = _i6;ts8[_j2] = tnts(_i6);tn8[_j2] = _i6;
+	            ts9[_j2] = tnts(_i6);tn9[_j2] = _i6;ts10[_j2] = tnts(_i6);tn10[_j2] = _i6;
+	            ts11[_j2] = tnts(_i6);tn11[_j2] = _i6;ts12[_j2] = tnts(_i6);tn12[_j2] = _i6;
+	            ts13[_j2] = tnts(_i6);tn13[_j2] = _i6;ts14[_j2] = tnts(_i6);tn14[_j2] = _i6;
+	            ts15[_j2] = tnts(_i6);tn15[_j2] = _i6;ts16[_j2] = tnts(_i6);tn16[_j2] = _i6;
+	            ts17[_j2] = tnts(_i6);tn17[_j2] = _i6;ts18[_j2] = tnts(_i6);tn18[_j2] = _i6;
+	            ts19[_j2] = tnts(_i6);tn19[_j2] = _i6;ts20[_j2] = tnts(_i6);tn20[_j2] = _i6;
+	            ts21[_j2] = tnts(_i6);tn21[_j2] = _i6;
+	            _j2++;
+	          }
+	        }
+	        _s2.splice(0, 1);_s2.splice(0, 1);_n2.splice(0, 1);_n2.splice(0, 1);
+	        var _s3 = _s2;var _n3 = _n2;_s2 = _ts;_n2 = _tn;
+	        _s2.splice(0, 1);_s2.splice(1, 1);_n2.splice(0, 1);_n2.splice(1, 1);
+	        var _s4 = _s2;var _n4 = _n2;_s2 = _ts2;_n2 = _tn2;
+	        _s2.splice(0, 1);_s2.splice(2, 1);_n2.splice(0, 1);_n2.splice(2, 1);
+	        var _s5 = _s2;var _n5 = _n2;_s2 = _ts3;_n2 = _tn3;
+	        _s2.splice(0, 1);_s2.splice(3, 1);_n2.splice(0, 1);_n2.splice(3, 1);
+	        var _s6 = _s2;var _n6 = _n2;_s2 = _ts4;_n2 = _tn4;
+	        _s2.splice(0, 1);_s2.splice(4, 1);_n2.splice(0, 1);_n2.splice(4, 1);
+	        var _s7 = _s2;var _n7 = _n2;_s2 = _ts5;_n2 = _tn5;
+	        _s2.splice(0, 1);_s2.splice(5, 1);_n2.splice(0, 1);_n2.splice(5, 1);
+	        var _s8 = _s2;var _n8 = _n2;_s2 = _ts6;_n2 = _tn6;
+	        _s2.splice(1, 1);_s2.splice(1, 1);_n2.splice(1, 1);_n2.splice(1, 1);
+	        var s7 = _s2;var n7 = _n2;_s2 = ts7;_n2 = tn7;
+	        _s2.splice(1, 1);_s2.splice(2, 1);_n2.splice(1, 1);_n2.splice(2, 1);
+	        var s8 = _s2;var n8 = _n2;_s2 = ts8;_n2 = tn8;
+	        _s2.splice(1, 1);_s2.splice(3, 1);_n2.splice(1, 1);_n2.splice(3, 1);
+	        var s9 = _s2;var n9 = _n2;_s2 = ts9;_n2 = tn9;
+	        _s2.splice(1, 1);_s2.splice(4, 1);_n2.splice(1, 1);_n2.splice(4, 1);
+	        var s10 = _s2;var n10 = _n2;_s2 = ts10;_n2 = tn10;
+	        _s2.splice(1, 1);_s2.splice(5, 1);_n2.splice(1, 1);_n2.splice(5, 1);
+	        var s11 = _s2;var n11 = _n2;_s2 = ts11;_n2 = tn11;
+	        _s2.splice(2, 1);_s2.splice(2, 1);_n2.splice(2, 1);_n2.splice(2, 1);
+	        var s12 = _s2;var n12 = _n2;_s2 = ts12;_n2 = tn12;
+	        _s2.splice(2, 1);_s2.splice(3, 1);_n2.splice(2, 1);_n2.splice(3, 1);
+	        var s13 = _s2;var n13 = _n2;_s2 = ts13;_n2 = tn13;
+	        _s2.splice(2, 1);_s2.splice(4, 1);_n2.splice(2, 1);_n2.splice(4, 1);
+	        var s14 = _s2;var n14 = _n2;_s2 = ts14;_n2 = tn14;
+	        _s2.splice(2, 1);_s2.splice(5, 1);_n2.splice(2, 1);_n2.splice(5, 1);
+	        var s15 = _s2;var n15 = _n2;_s2 = ts15;_n2 = tn15;
+	        _s2.splice(3, 1);_s2.splice(3, 1);_n2.splice(3, 1);_n2.splice(3, 1);
+	        var s16 = _s2;var n16 = _n2;_s2 = ts16;_n2 = tn16;
+	        _s2.splice(3, 1);_s2.splice(4, 1);_n2.splice(3, 1);_n2.splice(4, 1);
+	        var s17 = _s2;var n17 = _n2;_s2 = ts17;_n2 = tn17;
+	        _s2.splice(3, 1);_s2.splice(5, 1);_n2.splice(3, 1);_n2.splice(5, 1);
+	        var s18 = _s2;var n18 = _n2;_s2 = ts18;_n2 = tn18;
+	        _s2.splice(4, 1);_s2.splice(4, 1);_n2.splice(4, 1);_n2.splice(4, 1);
+	        var s19 = _s2;var n19 = _n2;_s2 = ts19;_n2 = tn19;
+	        _s2.splice(4, 1);_s2.splice(5, 1);_n2.splice(4, 1);_n2.splice(5, 1);
+	        var s20 = _s2;var n20 = _n2;_s2 = ts20;_n2 = tn20;
+	        _s2.splice(5, 1);_s2.splice(5, 1);_n2.splice(5, 1);_n2.splice(5, 1);
+	        var s21 = _s2;var n21 = _n2;_s2 = ts21;_n2 = tn21;
+	        console.log(Math.max(ref(_s3, _n3), ref(_s4, _n4), ref(_s5, _n5), ref(_s6, _n6), ref(_s7, _n7), ref(_s8, _n8), ref(s7, n7), ref(s8, n8), ref(s9, n9), ref(s10, n10), ref(s11, n11), ref(s12, n12), ref(s13, n13), ref(s14, n14), ref(s15, n15), ref(s16, n16), ref(s17, n17), ref(s18, n18), ref(s19, n19), ref(s20, n20), ref(s21, n21)));
+	        var _maxpoker = Math.max(ref(_s3, _n3), ref(_s4, _n4), ref(_s5, _n5), ref(_s6, _n6), ref(_s7, _n7), ref(_s8, _n8), ref(s7, n7), ref(s8, n8), ref(s9, n9), ref(s10, n10), ref(s11, n11), ref(s12, n12), ref(s13, n13), ref(s14, n14), ref(s15, n15), ref(s16, n16), ref(s17, n17), ref(s18, n18), ref(s19, n19), ref(s20, n20), ref(s21, n21));
+	        _this.setState({
+	          poker: renderpoker(_maxpoker)
+	        });
+	        var _result = maxcards([{ value: ref(_s3, _n3), cards: _n3 }, { value: ref(_s4, _n4), cards: _n4 }, { value: ref(_s5, _n5), cards: _n5 }, { value: ref(_s6, _n6), cards: _n6 }, { value: ref(_s7, _n7), cards: _n7 }, { value: ref(_s8, _n8), cards: _n8 }, { value: ref(s7, n7), cards: n7 }, { value: ref(s8, n8), cards: n8 }, { value: ref(s9, n9), cards: n9 }, { value: ref(s10, n10), cards: n10 }, { value: ref(s11, n11), cards: n11 }, { value: ref(s12, n12), cards: n12 }, { value: ref(s13, n13), cards: n13 }, { value: ref(s14, n14), cards: n14 }, { value: ref(s15, n15), cards: n15 }, { value: ref(s16, n16), cards: n16 }, { value: ref(s17, n17), cards: n17 }, { value: ref(s18, n18), cards: n18 }, { value: ref(s19, n19), cards: n19 }, { value: ref(s20, n20), cards: n20 }, { value: ref(s21, n21), cards: n21 }]);
+	        var all = [cards.p1.card, cards.p2.card, cards.b1.card, cards.b2.card, cards.b3.card, cards.b4.card, cards.b5.card];
+	        var leave = [];
+	        for (var c = 0; c < 7; c += 1) {
+	          if (all[c] !== _result[0] && all[c] !== _result[1] && all[c] !== _result[2] && all[c] !== _result[3] && all[c] !== _result[4]) {
+	            leave.push(all[c]);
+	          }
+	        }
+	        var _i5 = void 0;
+	        if (cards.p1.card === leave[0] && cards.p2.card === leave[1]) {
+	          _i5 = 1;
+	        } else if (cards.p1.card === leave[0] && cards.b1.card === leave[1]) {
+	          _i5 = 2;
+	        } else if (cards.p1.card === leave[0] && cards.b2.card === leave[1]) {
+	          _i5 = 3;
+	        } else if (cards.p1.card === leave[0] && cards.b3.card === leave[1]) {
+	          _i5 = 4;
+	        } else if (cards.p1.card === leave[0] && cards.b4.card === leave[1]) {
+	          _i5 = 5;
+	        } else if (cards.p1.card === leave[0] && cards.b5.card === leave[1]) {
+	          _i5 = 6;
+	        } else if (cards.p2.card === leave[0] && cards.b1.card === leave[1]) {
+	          _i5 = 7;
+	        } else if (cards.p2.card === leave[0] && cards.b2.card === leave[1]) {
+	          _i5 = 8;
+	        } else if (cards.p2.card === leave[0] && cards.b3.card === leave[1]) {
+	          _i5 = 9;
+	        } else if (cards.p2.card === leave[0] && cards.b4.card === leave[1]) {
+	          _i5 = 10;
+	        } else if (cards.p2.card === leave[0] && cards.b5.card === leave[1]) {
+	          _i5 = 11;
+	        } else if (cards.b1.card === leave[0] && cards.b2.card === leave[1]) {
+	          _i5 = 12;
+	        } else if (cards.b1.card === leave[0] && cards.b3.card === leave[1]) {
+	          _i5 = 13;
+	        } else if (cards.b1.card === leave[0] && cards.b4.card === leave[1]) {
+	          _i5 = 14;
+	        } else if (cards.b1.card === leave[0] && cards.b5.card === leave[1]) {
+	          _i5 = 15;
+	        } else if (cards.b2.card === leave[0] && cards.b3.card === leave[1]) {
+	          _i5 = 16;
+	        } else if (cards.b2.card === leave[0] && cards.b4.card === leave[1]) {
+	          _i5 = 17;
+	        } else if (cards.b2.card === leave[0] && cards.b5.card === leave[1]) {
+	          _i5 = 18;
+	        } else if (cards.b3.card === leave[0] && cards.b4.card === leave[1]) {
+	          _i5 = 19;
+	        } else if (cards.b3.card === leave[0] && cards.b5.card === leave[1]) {
+	          _i5 = 20;
+	        } else {
+	          _i5 = 21;
+	        }
+	        if (_i5 === 1) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 0 },
+	            p2: { card: cards.p2.card, pick: 0 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 2) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 0 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 0 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 3) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 0 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 0 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 4) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 0 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 0 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 5) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 0 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 0 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 6) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 0 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 0 }
+	          });
+	        } else if (_i5 === 7) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 0 },
+	            b1: { card: cards.b1.card, pick: 0 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 8) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 0 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 0 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 9) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 0 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 0 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 10) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 0 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 0 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 11) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 0 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 0 }
+	          });
+	        } else if (_i5 === 12) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 0 },
+	            b2: { card: cards.b2.card, pick: 0 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 13) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 0 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 0 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 14) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 0 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 0 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 15) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 0 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 0 }
+	          });
+	        } else if (_i5 === 16) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 0 },
+	            b3: { card: cards.b3.card, pick: 0 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 17) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 0 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 0 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 18) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 0 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 0 }
+	          });
+	        } else if (_i5 === 19) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 0 },
+	            b4: { card: cards.b4.card, pick: 0 },
+	            b5: { card: cards.b5.card, pick: 1 }
+	          });
+	        } else if (_i5 === 20) {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 0 },
+	            b4: { card: cards.b4.card, pick: 1 },
+	            b5: { card: cards.b5.card, pick: 0 }
+	          });
+	        } else {
+	          _this.setState({
+	            p1: { card: cards.p1.card, pick: 1 },
+	            p2: { card: cards.p2.card, pick: 1 },
+	            b1: { card: cards.b1.card, pick: 1 },
+	            b2: { card: cards.b2.card, pick: 1 },
+	            b3: { card: cards.b3.card, pick: 1 },
+	            b4: { card: cards.b4.card, pick: 0 },
+	            b5: { card: cards.b5.card, pick: 0 }
+	          });
+	        }
+	      }
+	    };
+
+	    _this.state = {
+	      p1: { card: 0, pick: 0 },
+	      p2: { card: 0, pick: 0 },
+	      b1: { card: 0, pick: 0 },
+	      b2: { card: 0, pick: 0 },
+	      b3: { card: 0, pick: 0 },
+	      b4: { card: 0, pick: 0 },
+	      b5: { card: 0, pick: 0 },
+	      poker: ''
+	    };
+	    _this.dealcard = _this.dealcard.bind(_this);
+	    _this.decide = _this.decide.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(PokerApp, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'button',
+	            { onClick: this.dealcard, type: 'submit', className: 'btn btn-primary' },
+	            '\u767C\u724C'
+	          ),
+	          _react2.default.createElement(_poker_decide2.default, { cards: this.state, decide: function decide(cards) {
+	              return _this2.decide(cards);
+	            } })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            this.renderp1(this.state.p1),
+	            this.renderp2(this.state.p2)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            this.renderb1(this.state.b1),
+	            this.renderb2(this.state.b2),
+	            this.renderb3(this.state.b3),
+	            this.renderb4(this.state.b4),
+	            this.renderb5(this.state.b5)
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          this.state.poker
+	        )
+	      );
+	    }
+	  }]);
+
+	  return PokerApp;
+	}(_react.Component);
+
+	exports.default = PokerApp;
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -19791,178 +20540,182 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var PokerApp = function (_Component) {
-	  _inherits(PokerApp, _Component);
+	var PokerDecide = function (_Component) {
+	  _inherits(PokerDecide, _Component);
 
-	  function PokerApp(props) {
-	    _classCallCheck(this, PokerApp);
+	  function PokerDecide(props) {
+	    _classCallCheck(this, PokerDecide);
 
-	    var _this = _possibleConstructorReturn(this, (PokerApp.__proto__ || Object.getPrototypeOf(PokerApp)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (PokerDecide.__proto__ || Object.getPrototypeOf(PokerDecide)).call(this, props));
 
-	    _this.renderp1 = function (card) {
-	      if (card === 0) {
-	        return _react2.default.createElement("img", { src: "/style/back.jpg", id: "f" });
-	      } else {
-	        return _react2.default.createElement("img", { src: "/style/front/" + card.toString() + ".jpg", id: "f" });
-	      }
+	    _this.decide = function () {
+	      _this.props.decide(_this.props.cards);
 	    };
 
-	    _this.renderp2 = function (card) {
-	      if (!card) {
-	        return _react2.default.createElement("img", { src: "/style/back.jpg", id: "s" });
-	      } else {
-	        return _react2.default.createElement("img", { src: "/style/front/" + card.toString() + ".jpg", id: "s" });
-	      }
-	    };
-
-	    _this.renderb1 = function (card) {
-	      if (!card) {
-	        return _react2.default.createElement("img", { src: "/style/back.jpg", id: "f" });
-	      } else {
-	        return _react2.default.createElement("img", { src: "/style/front/" + card.toString() + ".jpg", id: "f" });
-	      }
-	    };
-
-	    _this.renderb2 = function (card) {
-	      if (!card) {
-	        return _react2.default.createElement("img", { src: "/style/back.jpg", id: "s" });
-	      } else {
-	        return _react2.default.createElement("img", { src: "/style/front/" + card.toString() + ".jpg", id: "s" });
-	      }
-	    };
-
-	    _this.renderb3 = function (card) {
-	      if (!card) {
-	        return _react2.default.createElement("img", { src: "/style/back.jpg", id: "s" });
-	      } else {
-	        return _react2.default.createElement("img", { src: "/style/front/" + card.toString() + ".jpg", id: "s" });
-	      }
-	    };
-
-	    _this.renderb4 = function (card) {
-	      if (!card) {
-	        return _react2.default.createElement("img", { src: "/style/back.jpg", id: "s" });
-	      } else {
-	        return _react2.default.createElement("img", { src: "/style/front/" + card.toString() + ".jpg", id: "s" });
-	      }
-	    };
-
-	    _this.renderb5 = function (card) {
-	      if (!card) {
-	        return _react2.default.createElement("img", { src: "/style/back.jpg", id: "s" });
-	      } else {
-	        return _react2.default.createElement("img", { src: "/style/front/" + card.toString() + ".jpg", id: "s" });
-	      }
-	    };
-
-	    _this.dealcard = function () {
-	      var a = [0, 0, 0, 0, 0, 0, 0];
-	      if (!_this.state.p1) {
-	        var i = 0,
-	            r = void 0;
-	        while (i < 5) {
-	          r = Math.floor(Math.random() * 52 + 1);
-	          var c = 0;
-	          for (var j = 0; j < i; j++) {
-	            if (a[j] === r) {
-	              c++;
-	            }
-	          }
-	          if (!c) {
-	            a[i] = r;
-	            i++;
-	          }
-	        };
-	        _this.setState({ p1: a[0], p2: a[1], b1: a[2], b2: a[3], b3: a[4] });
-	      } else if (!_this.state.b4) {
-	        var b = 1,
-	            _r = void 0;
-	        while (b) {
-	          var _c = 0;
-	          for (var _i = 0; _i < 5; _i++) {
-	            _r = Math.floor(Math.random() * 52 + 1);
-	            if (a[_i] === _r) {
-	              _c++;
-	            }
-	          }
-	          if (!_c) {
-	            a[5] = _r;
-	            b = 0;
-	          }
-	        }
-	        _this.setState({ b4: a[5] });
-	      } else {
-	        var _b = 1,
-	            _r2 = void 0;
-	        while (_b) {
-	          var _c2 = 0;
-	          for (var _i2 = 0; _i2 < 6; _i2++) {
-	            _r2 = Math.floor(Math.random() * 52 + 1);
-	            if (a[_i2] === _r2) {
-	              _c2++;
-	            }
-	          }
-	          if (!_c2) {
-	            a[6] = _r2;
-	            _b = 0;
-	          }
-	        }
-	        _this.setState({ b5: a[6] });
-	      }
-	    };
-
-	    _this.state = { p1: 0, p2: 0, b1: 0, b2: 0, b3: 0, b4: 0, b5: 0 };
-	    _this.dealcard = _this.dealcard.bind(_this);
+	    _this.state = {};
+	    _this.decide = _this.decide.bind(_this);
 	    return _this;
 	  }
 
-	  _createClass(PokerApp, [{
+	  _createClass(PokerDecide, [{
 	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "div",
-	          null,
-	          _react2.default.createElement(
-	            "button",
-	            { onClick: this.dealcard, type: "submit", className: "btn btn-primary" },
-	            "\u767C\u724C"
-	          ),
-	          _react2.default.createElement(
-	            "button",
-	            { type: "submit", id: "b", className: "btn btn-primary" },
-	            "\u6700\u5927\u724C\u578B"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          null,
-	          _react2.default.createElement(
-	            "div",
-	            null,
-	            this.renderp1(this.state.p1),
-	            this.renderp2(this.state.p2)
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            null,
-	            this.renderb1(this.state.b1),
-	            this.renderb2(this.state.b2),
-	            this.renderb3(this.state.b3),
-	            this.renderb4(this.state.b4),
-	            this.renderb5(this.state.b5)
-	          )
-	        )
+	        "button",
+	        { onClick: this.decide, type: "submit", id: "b", className: "btn btn-primary" },
+	        "\u6700\u5927\u724C\u578B"
 	      );
 	    }
 	  }]);
 
-	  return PokerApp;
+	  return PokerDecide;
 	}(_react.Component);
 
-	exports.default = PokerApp;
+	exports.default = PokerDecide;
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	module.exports = function (num) {
+	  var a = Math.ceil(num / 4);
+	  var b = num % 4;
+	  var c = void 0,
+	      d = void 0;
+	  var e = a + 1;
+	  if (a === 13) {
+	    c = 'A';
+	  } else if (a === 12) {
+	    c = 'K';
+	  } else if (a === 11) {
+	    c = 'Q';
+	  } else if (a === 10) {
+	    c = 'J';
+	  } else if (a === 9) {
+	    c = 'T';
+	  } else {
+	    c = e.toString();
+	  }
+	  if (b === 1) {
+	    d = 'c';
+	  } else if (b === 2) {
+	    d = 'd';
+	  } else if (b === 3) {
+	    d = 'h';
+	  } else {
+	    d = 's';
+	  }
+	  var s = c + d;
+	  return s;
+	};
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	module.exports = function (s, n) {
+	  var a = [];
+	  for (var i = 0; i < 5; i++) {
+	    a.push(Math.ceil(n[i] / 4));
+	  }
+	  if (s[0][1] === s[1][1] && s[1][1] === s[2][1] && s[2][1] === s[3][1] && s[3][1] === s[4][1]) {
+	    if (n[0] - n[1] === 4 && n[1] - n[2] === 4 && n[2] - n[3] === 4 && n[3] - n[4] === 4) {
+	      return 90000 + n[0];
+	    } else if (n[1] - n[2] === 4 && n[2] - n[3] === 4 && n[3] - n[4] === 4 && n[0] - n[4] === 48) {
+	      return 90000 + n[1];
+	    } else {
+	      return 60000 + n[0] + n[1] + n[2] + n[3] + n[4];
+	    }
+	  } else if (s[0][0] === s[1][0] && s[1][0] === s[2][0] && s[2][0] === s[3][0]) {
+	    return 80000 + a[0] * 100 + n[4];
+	  } else if (s[1][0] === s[2][0] && s[2][0] === s[3][0] && s[3][0] === s[4][0]) {
+	    return 80000 + a[1] * 100 + n[0];
+	  } else if (s[0][0] === s[1][0] && s[1][0] === s[2][0] && s[3][0] === s[4][0]) {
+	    return 70000 + a[0] * 100 + n[3] + n[4];
+	  } else if (s[0][0] === s[1][0] && s[2][0] === s[3][0] && s[3][0] === s[4][0]) {
+	    return 70000 + a[4] * 100 + n[0] + n[1];
+	  } else if (a[0] - a[1] === 1 && a[1] - a[2] === 1 && a[2] - a[3] === 1 && a[3] - a[4] === 1) {
+	    return 50000 + n[0] * 100 + n[1] + n[2] * 0.01 + n[3] * 0.0001 + n[4] * 0.000001;
+	  } else if (a[1] - a[2] === 1 && a[2] - a[3] === 1 && a[3] - a[4] === 1 && a[0] - a[4] === 12) {
+	    return 50000 + n[1] * 100 + n[2] + n[3] * 0.01 + n[4] * 0.0001 + n[0] * 0.000001;
+	  } else if (s[0][0] === s[1][0] && s[1][0] === s[2][0] && s[2][0] !== s[3][0] && s[3][0] !== s[4][0]) {
+	    return 40000 + a[0] * 100 + n[3] + n[4];
+	  } else if (s[0][0] !== s[1][0] && s[1][0] === s[2][0] && s[2][0] === s[3][0] && s[3][0] !== s[4][0]) {
+	    return 40000 + a[1] * 100 + n[0] + n[4];
+	  } else if (s[0][0] !== s[1][0] && s[1][0] !== s[2][0] && s[2][0] === s[3][0] && s[3][0] === s[4][0]) {
+	    return 40000 + a[2] * 100 + n[0] + n[1];
+	  } else if (s[0][0] === s[1][0] && s[1][0] !== s[2][0] && s[2][0] === s[3][0] && s[3][0] !== s[4][0]) {
+	    return 30000 + a[0] * 100 + a[2] + n[4] * 0.01;
+	  } else if (s[0][0] === s[1][0] && s[1][0] !== s[2][0] && s[2][0] !== s[3][0] && s[3][0] === s[4][0]) {
+	    return 30000 + a[0] * 100 + a[3] + n[2] * 0.01;
+	  } else if (s[0][0] !== s[1][0] && s[1][0] === s[2][0] && s[2][0] !== s[3][0] && s[3][0] === s[4][0]) {
+	    return 30000 + a[1] * 100 + a[3] + n[0] * 0.01;
+	  } else if (s[0][0] === s[1][0] && s[1][0] !== s[2][0] && s[2][0] !== s[3][0] && s[3][0] !== s[4][0]) {
+	    return 20000 + a[0] * 100 + n[2] + n[3] * 0.01 + n[4] * 0.0001;
+	  } else if (s[0][0] !== s[1][0] && s[1][0] === s[2][0] && s[2][0] !== s[3][0] && s[3][0] !== s[4][0]) {
+	    return 20000 + a[1] * 100 + n[0] + n[3] * 0.01 + n[4] * 0.0001;
+	  } else if (s[0][0] !== s[1][0] && s[1][0] !== s[2][0] && s[2][0] === s[3][0] && s[3][0] !== s[4][0]) {
+	    return 20000 + a[2] * 100 + n[0] + n[1] * 0.01 + n[4] * 0.0001;
+	  } else if (s[0][0] !== s[1][0] && s[1][0] !== s[2][0] && s[2][0] !== s[3][0] && s[3][0] === s[4][0]) {
+	    return 20000 + a[3] * 100 + n[0] + n[1] * 0.01 + n[2] * 0.0001;
+	  } else {
+	    return 10000 + n[0] + n[1] + n[2] + n[3] + n[4];
+	  }
+	};
+
+/***/ }),
+/* 164 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	module.exports = function (arr) {
+	  var n = arr.length;
+	  var b = arr[0].value;
+	  for (var i = 0; i < n; i += 1) {
+	    if (arr[i].value > b) {
+	      b = arr[i].value;
+	    }
+	  }
+	  for (var j = 0; j < n; j += 1) {
+	    if (b === arr[j].value) {
+	      return arr[j].cards;
+	    }
+	  }
+	};
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	module.exports = function (num) {
+	  var a = Math.floor(num / 10000);
+	  if (a === 9) {
+	    return 'Straight Flush';
+	  } else if (a === 8) {
+	    return 'Four of a Kind';
+	  } else if (a === 7) {
+	    return 'Full House';
+	  } else if (a === 6) {
+	    return 'Flush';
+	  } else if (a === 5) {
+	    return 'Straight';
+	  } else if (a === 4) {
+	    return 'Three of a Kind';
+	  } else if (a === 3) {
+	    return 'Two Pairs';
+	  } else if (a === 2) {
+	    return 'One Pair';
+	  } else {
+	    return 'High Card';
+	  }
+	};
 
 /***/ })
 /******/ ]);
