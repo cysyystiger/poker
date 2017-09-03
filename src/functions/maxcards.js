@@ -1,4 +1,5 @@
 module.exports = (arr) => {
+  let c;
   const n = arr.length;
   let b = arr[0].value;
   for (let i = 0; i < n; i += 1) {
