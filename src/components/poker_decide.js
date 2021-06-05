@@ -14,7 +14,7 @@ export default class PokerDecide extends Component {
   render() {
     return (
       <button onClick={this.decide} type="submit" id="b" className="btn btn-primary" >
-        最大牌型
+        最大牌型最大
       </button>
     );
   }
